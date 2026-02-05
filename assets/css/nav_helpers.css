@@ -1,0 +1,179 @@
+/* Navigation Helper Styles */
+/* File: assets/css/nav_helpers.css */
+
+/**
+ * Back Button Styles
+ * Styling konsisten untuk back button di semua halaman
+ */
+
+/* Basic back button styling */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+  transform: translateX(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-back:active {
+  transform: translateX(-1px);
+}
+
+/* Back button dalam div wrapper */
+.back-button-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  background-color: transparent;
+  padding: 0.75rem 0;
+  margin-bottom: 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.breadcrumb-item {
+  display: inline-block;
+}
+
+.breadcrumb-item.active {
+  color: #6c757d;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "/";
+  display: inline-block;
+  padding: 0 0.5rem;
+  color: #6c757d;
+}
+
+.breadcrumb-item a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Page Header dengan Back Button */
+.page-header-with-back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.page-header-with-back .title-section h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.page-header-with-back .title-section p {
+  margin: 5px 0 0 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Navigation Buttons Group */
+.nav-buttons-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .page-header-with-back {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav-buttons-group {
+    width: 100%;
+  }
+
+  .btn-back {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+  }
+}
+
+/* Accessibility */
+.btn-back:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.breadcrumb-item a:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .btn-back {
+    background-color: #495057;
+    color: white;
+  }
+
+  .btn-back:hover {
+    background-color: #6c757d;
+  }
+
+  .breadcrumb {
+    color: #adb5bd;
+  }
+
+  .breadcrumb-item.active {
+    color: #adb5bd;
+  }
+
+  .breadcrumb-item a {
+    color: #66b3ff;
+  }
+
+  .breadcrumb-item a:hover {
+    color: #99ccff;
+  }
+
+  .page-header-with-back {
+    border-bottom-color: #404040;
+  }
+
+  .page-header-with-back .title-section h1 {
+    color: #f1f5f9;
+  }
+
+  .page-header-with-back .title-section p {
+    color: #cbd5e1;
+  }
+}
